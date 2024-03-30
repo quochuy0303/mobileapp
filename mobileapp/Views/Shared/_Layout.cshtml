@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCV</title>
+    <meta name="keywords" content="Iphone,Xiaomi,Realme,SamSung,Oppo" />
+    <meta name="description" content="Website Kinh Doanh Điện Thoại - HCV" />
+    <meta name="copyright" content="HCV" />
+    <meta name="author" content="HCV" />
+    <link rel="shortcut icon" href="~/images/phone.png type="image/x-icon" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/vendor/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <img src="~/images/banner01.png" style="width: 350px; height: 79px; alt="PET'S STORE">
+            </div>
+
+            <div class="container">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Trang chủ</a></li>
+                                <li><a href="#">Điện Thoại</a></li> 
+                                <li><a href="#">Phụ Kiện</a></li>
+                                <li><a href="#">Bài viết</a></li>
+                                <li><a href="#">Liên hệ</a></li>
+                            </ul>
+                            <partial name="_LoginPartial" />
+                           @*  <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#" data-toggle="modal" data-target="#modalSignup"><span class="glyphicon glyphicon-user"></span> Đăng ký</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#modalLogin"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+                            </ul> *@
+                            
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="col-md-9">          
+                @RenderBody()
+            </div>           
+        </div>
+    </div>
+    
+
+    <div class="footer">
+        <div class="container container-footer">
+            <div class="col-md-8">
+                <h4>MOBILE - HCD</h4>
+                <p>Địa chỉ: Linh Xuân, Tp. Thử Đức, Tp. Hồ chí Minh</p>
+                <p>SĐT: <a class="info" href="tel:0359691577">035.969.1577</a> (HCV)</p>
+                <p>Email: <a class="info" href="mailto: qhuy071003@gmail.com">qhuy071003@gmail.com</a></p>
+            </div>
+
+            <div class="col-md-4">
+                <img src="https://thietkehaithanh.com/wp-content/uploads/2019/06/thietkehaithanh-banner-1-1.jpg" style="width: 350px; height: 79px; alt="logo" />
+                <p></p>              
+            </div>
+        </div>
+    </div>
+<!--Đăng ký-->
+    <div id="modalSignup" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Đăng ký</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" placeholder="Nhập username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">Họ tên:</label>
+                            <input type="text" class="form-control" id="fullname" placeholder="Nhập họ tên" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" class="form-control" id="address" placeholder="Nhập địa chỉ">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Nhập email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Mật khẩu:</label>
+                            <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Nhập lại mật khẩu:</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Đăng Nhập-->
+    <div id="modalLogin" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Đăng nhập</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" placeholder="Nhập username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Mật khẩu:</label>
+                            <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
+
+
+
